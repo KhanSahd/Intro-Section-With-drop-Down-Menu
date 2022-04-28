@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 41%);
+    width: 100%;
+}
+
+#header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown::after {
+    content: url('./images/icon-arrow-down.svg');
+    margin: .5rem;
+}
+
+
+
+#nav-list p:hover, #log-reg p:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.flex-item {
+    margin-right: 2rem;
+}
+
+#nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#log-reg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+}
+
+#reg-button {
+    border: solid 2px hsl(0, 0%, 41%);
+    border-radius: 5%;
+    padding: .6rem
+}
+
+
+#featuresbox {
+    left: 5%;
+    top: 10%;
+    background-color: hsl(0, 0%, 98%);
+    position: absolute;
+    width: 10%;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    border-radius: 5%;
+    box-shadow: inset 0 0 1px #000000;
+}
+
+#companybox {
+    left: 20%;
+    top: 10%;
+    background-color: hsl(0, 0%, 98%);
+    position: absolute;
+    width: 7%;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+    height: 5rem;
+    border-radius: 5%;
+    box-shadow: inset 0 0 1px #000000;
+}
+
+#todo::before, #todo-mobile::before {
+    content: url('./images/icon-todo.svg');
+    margin-right: .5rem;
+}
+#calendar::before, #calendar-mobile::before {
+    content: url('./images/icon-calendar.svg');
+    margin-right: .5rem;
+}
+#reminders::before, #reminders-mobile::before {
+    content: url('./images/icon-reminders.svg');
+    margin-right: .5rem;
+}
+#planning::before, #planning-mobile::before {
+    content: url('./images/icon-planning.svg');
+    margin-right: .5rem;
+}
+
+#hero {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#hero-mobile-logo {
+    display: none;
+}
+
+.hero-flexitem {
+    width: 31%;
+    
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+}
+
+.herotext {
+    margin-bottom: 2rem;
+}
+
+#hero-maintext {
+    color: hsl(0, 0%, 8%);
+    font-size: 3.4rem;
+}
+
+#hero-para {
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+#learn-button {
+    border: solid 1px black;
+    width: 30%;
+    text-align: center;
+    padding: .8rem;
+    border-radius: 10%;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    font-weight: 700;
+}
+
+#learn-button:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+    background-color: hsl(0, 0%, 98%);
+    transition: all ease-in-out 500ms;
+}
+
+#ads {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    
+    #nav-list {
+        display: none;
+    }
+
+    #log-reg {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #hamburger-menu {
+        display: none;
+        position: absolute;
+        width: 60%;
+        right: 0;
+        top: 0;
+        padding: 1rem;
+        min-height: 100%;
+        box-shadow: inset 0 0 5px #000000;
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    #hamburger-menu img {
+        position: absolute;
+        right: 20px;
+    }
+
+    #hamburger-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    #hamburger-items p {
+        margin-bottom: 1rem;
+    }
+
+    #features-mobile:hover, #company-mobile:hover {
+        cursor: pointer;
+    }
+
+    #features-list-mobile, #company-list-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 3rem;
+    }
+
+    #log-reg-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #log-reg-mobile p {
+        margin-top: 1.5rem;
+    }
+
+    #reg-mobile {
+        border: solid 2px hsl(0, 0%, 41%);
+        padding: 1rem;
+        border-radius: 5px;
+        width: 60%;
+        text-align: center;
+    }
+
+    #hero {
+        flex-direction: column-reverse;
+    }
+
+    #heroLogo {
+        display: none;
+    }
+
+    #hero-mobile-logo {
+        display: block;
+    }
+
+    .hero-flexitem {
+        width: 100%;
+    }
+
+    #text {
+        align-content: center;
+        align-items: center;
+    }
+
+    #hero-maintext {
+        font-size: 1.7rem;
+        margin-top: 2rem;
+    }
+
+    #hero-para {
+        text-align: center;
+    }
+
+    #learn-button {
+        width: 40%;
+    }
+
+    #ads {
+        margin-top: 1rem;
+    }
+
+}
